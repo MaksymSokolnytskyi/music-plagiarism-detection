@@ -1,0 +1,16 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.cache/
+build/
+dist/
+# audio and model weights never enter the repository
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.pt
+*.npy

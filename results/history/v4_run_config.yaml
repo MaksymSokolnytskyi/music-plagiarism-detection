@@ -1,0 +1,24 @@
+audio:
+  sample_rate: 16000
+  chunk_duration: 10.0
+  chunk_hop: 5.0
+  n_mels: 128
+  n_fft: 1024
+  hop_length: 512
+model:
+  embedding_dim: 128
+  fusion: concat_diff
+  dropout: 0.3
+  pretrained: true
+training:
+  epochs: 50
+  batch_size: 8
+  learning_rate: 0.0003
+  weight_decay: 1.0e-05
+  early_stopping_patience: 12
+  device: cuda
+database:
+  index_type: hnsw
+  nprobe: 32
+  use_gpu: true
+  batch_size: 1000

@@ -1,0 +1,91 @@
+original,suspect,label,cosine,head_prob
+acdc acdc thunderstruck,2 cellos acdc thunderstruck thunderstruck,1,0.7403225898742676,0.45813971757888794
+nirvana nirvana smells like teen spirit,83 covers for smells like teen spirit 2009 paul anka smells like teen spirit,1,0.9487134218215942,0.7211184501647949
+zutons valerie,amy winehouse valerie,1,0.8609416484832764,0.4932074248790741
+metallica metallica nothing else matters,apocalyptica cult 2000 apocalyptica nothing else matters metallica cover live in mnchen,1,0.8993151783943176,0.5904396176338196
+otis redding respect remastered 1967 album version,aretha franklin aretha franklin respect,1,0.8600855469703674,0.5753758549690247
+the cardigans iron man,black sabbath paranoid 1970 iron man,1,0.14336839318275452,0.22485950589179993
+blackstreet feat dr dre no diggity clean,chet faker no diggity blackstreet cover no diggity blackstreet cover,1,0.6403436660766602,0.4216521680355072
+the nerves hanging on the telephone ost electrick children,blondie hanging on the telephone,1,0.4687643051147461,0.1784268617630005
+bob dylan knocking on heavens door ost knockin on heavens door,guns n roses knockin on heavens door,1,0.540273129940033,0.3249279260635376
+bruce springsteen the e street band blinded by the light,manfred mans earth band blinded by the light manfred mans earth band blinded by the light,1,0.9421591758728027,0.6993112564086914
+carl perkins blue suede shoes,elvis presley blue suede shoes minus blue suede shoes elvis presley,1,0.9808574914932251,0.7886430621147156
+ccr proud mary,tina turner proud mary ike and tina turner,1,0.9283376932144165,0.7071249485015869
+cy grant feeling good,muse feeling good its a new dawn its a new day its a new life for me and im feeling good,1,0.8914893269538879,0.3460610806941986
+robert hazard girls just want to have fun,cyndi lauper girls just wanna have fun girls just want to have fun ost,1,0.872924268245697,0.6224429607391357
+dead or alive you spin me right round you spin me right round,flo rida you spin my head right round feat ke ha you spin my head right round feat ke ha,1,0.5543593764305115,0.4590669870376587
+simon garfunkel the sound of silence 01 simon garfunkel the sound of silence,disturbed the sound of silence,1,0.8067513704299927,0.3740638196468353
+ednaswap torn,natalia imbruglia torn,1,0.8853216767311096,0.5922996401786804
+elvis presley elvis presli always on my mind,pet shop boys always on my mind in my house,1,0.960676372051239,0.4492994248867035
+fleetwood mac black magic woman,santana black magic woman santana black magic woman,1,0.6816367506980896,0.38731715083122253
+the source feat candi staton youve got the love,florence the machine youve got the love florence the machine youve got the love,1,0.32790660858154297,0.24150092899799347
+roberta flack killing me softly with his song,fugees killing me softly killing me softly,1,0.985180139541626,0.884179949760437
+gloria jones tainted love tainted love,soft cell tainted love soft cell tainted love,1,0.7677083015441895,0.1869724690914154
+snoop doggy dogg gin and juice,gourds gin and juice,1,0.8447868227958679,0.5178486704826355
+the iron maidens run to the hills the iron maidens run to the hills,hellsongs run to the hills,1,0.9156433939933777,0.2030399888753891
+cris isaak wicked game,him him wicked game,1,0.871512234210968,0.18441100418567657
+james ray got my mind set on you parts 1 2,i got my mind set on you i got my mind set on you,1,0.794731616973877,0.18214945495128632
+postal service such great heights,iron wine such great heights,1,0.9664671421051025,0.6453617811203003
+the beatles with a little help from my friends,joe cocker 1969 with a little help from my friends with a little help from my friends jimmy page on guitar,1,0.9187910556793213,0.21309152245521545
+nine inch nails hurt,johnny cash hurt johnny cash hurt,1,0.35604575276374817,0.3266463279724121
+the knife heartbeats,jose gonzalez heartbeats,1,0.6776888370513916,0.4079049527645111
+kate bush running up that hill,placebo running up that hill a place for us to dream 20 years of placebo 2016,1,0.9399829506874084,0.1344967633485794
+kid cudi pursuit of happiness pursuit of happiness,lissie pursuit of happiness,1,0.7241947054862976,0.3909648656845093
+lead belly black betty,ram jam black betty ram jam 1977 hard rockusa,1,0.8825254440307617,0.6960384845733643
+the who behind blue eyes 1971 whos next,linking park behind blue eyes,1,0.9921879172325134,0.7723685503005981
+lynyrd skynyrd simple man original version,shinedown simple man,1,0.9928462505340576,0.7624751925468445
+the slits i heard it through the grapevine,marvin gaye i heard it through the grapevine written by norman whitfield and barrett strong in 1966 i heard it through the grapevine 1968,1,0.5016657114028931,0.18159450590610504
+the dubliners whiskey in the jar,metallica the best of the best 2017 metallica whiskey in the jar,1,0.5905774235725403,0.15583571791648865
+slade sladest 1973 slade cum on feel the noize,quiet riot cum on feel the noize kids at the bar remix,1,0.9428162574768066,0.5801203846931458
+radiohead creep,postmodern jukebox creep vintage postmodern jukebox radiohead cover ft haley,1,0.9742003083229065,0.7660925984382629
+stevie wonder higher ground,red hot chili peppers higher ground,1,0.8143486380577087,0.4435783624649048
+the crickets i fought the law,the clash i fought the law and the law won,1,0.8921328783035278,0.6962804198265076
+dolly parton jolene,the white stripes jolene,1,0.9055588245391846,0.7287496328353882
+outkast hey ya,obadiah parker hey ya,1,0.5546793937683105,0.35233810544013977
+kanye west stronger 2007 full kanye west stronger 2007 full,joy division decades,0,0.7118729948997498,0.29613804817199707
+the sex pistols sex pistols will play,bee gees love songs 2005 bee gees lonely days,0,0.6511884927749634,0.3464118540287018
+outkast bob,louis armstrong a kiss to build a dream on louis armstrong a kiss to build a dream on,0,0.9376922249794006,0.5693351626396179
+acdc highway to hell,prince prince papa,0,0.7459921836853027,0.5115900039672852
+radiohead radiohead no surprises,billie eilish billie eilish bad guy,0,0.8369544744491577,0.26547205448150635
+michael jackson michael jackson this is it ost majkl dzhekson vot i vsyo saundtrek 2009 michael jackson billie jean,miles davis 02 there is no greater love miles the new miles davis quintet 1956,0,0.8072651028633118,0.15210489928722382
+queen killer queen,kraftwerk kraftwerk 2 1972 kraftwerk atem,0,0.24771778285503387,0.09995579719543457
+led zeppelin led zeppelin iv 1971 led zeppelin stairway to heaven,the smiths back to the old house,0,0.9091806411743164,0.7201803922653198
+ray charles the very best of ray charles 1999 ray charles unchain my heart,jimi hendrix 12 jimi hendrix voodoo child slight return,0,0.8152910470962524,0.21157366037368774
+gorillaz gorilas feel good inc,dr dre deeez nuuuts,0,0.9501864910125732,0.6037654876708984
+iron maiden coming home,tool jerk off,0,0.49905452132225037,0.38089093565940857
+stevie wonder conversation peace 1995 stevie wonder sorry,leonard cohen leonard cohen nevermind,0,0.7822847366333008,0.2030685693025589
+the beatles yesterday the beatles yesterday,etta james etta james miss you,0,0.8288803100585938,0.30282947421073914
+the doors the very best of the doors 2001 the doors riders on the storm,james brown pavarotti its a mans world,0,0.9352102279663086,0.1307835727930069
+beastie boys intergalactic,lana del ray lana del rey summertime sadness,0,0.4579184651374817,0.11776158213615417
+muse the uprising,nirvana rape me,0,0.9715996980667114,0.31757864356040955
+rammstein ramshtajn du hast,kendrick lamar feat dr dre the recipe,0,0.9732271432876587,0.1909908950328827
+whitney houston various jesus loves me whitney houston,massive attack electronic collection best trips 2001 massive attack teardrop,0,0.6057590842247009,0.14420685172080994
+the clash we are the clash,bj 246rk bj 246rk 1977 bjcrk bukolla,0,0.4573621451854706,0.10443316400051117
+jay z hollywood feat beyonc,ella fitzgerald introductions of ella fitzgerald,0,0.6711972951889038,0.37623679637908936
+john coltrane im old fashioned,joni mitchell woodstock,0,0.8962032198905945,0.4537705183029175
+david bowie heroes 2017 remaster,patti smith fred sonic smith it takes time,0,0.7151904702186584,0.3409130573272705
+nick cave and the bad seeds the road ost doroga saundtrek with warren ellis 2009 nick cave and the bad seeds the cellar,muzika v mashinu 2025 deep purple smoke on the water searchshino remixfin,0,0.47256016731262207,0.24763965606689453
+aretha franklin i say a little prayer aretha franklin i say a little prayer,jamiroquai butterfly,0,0.8496207594871521,0.26733991503715515
+wu tang clan wu tang clan in the hood,lady gaga poker face,0,0.8259708881378174,0.2497592568397522
+adele easy on me,madonna hung up,0,0.9684017896652222,0.5055108666419983
+cher cher believe,johnny cash johnny cash the legend 2005 johnny cash hey porter,0,0.876046895980835,0.5521581172943115
+muddy waters muddy waters mannish boy,pink floyd echoes the best of pink floyd cd2 2001 pink floyd wish you were here,0,0.7061599493026733,0.38112619519233704
+duke ellington duke ellingtons liberian suite i like the sunrise,nina simone aint got no i got life nina simone v groovefinder remix,0,0.6200498938560486,0.2713838815689087
+elton john sacrifice,aphex twin aphex twin avril 14th,0,0.8344293832778931,0.3199905455112457
+arctic monkeys i wanna be yours,pearl jam jeremy,0,0.27873265743255615,0.3205620348453522
+talking heads psycho killer,depeche mode depeshe mode enjoy the silence,0,0.522438108921051,0.1460832804441452
+siouxsie and the banshees the quarterdrawing of the dog,kate bush kate bush 1983 kate bush babooshka,0,0.8060535192489624,0.24032482504844666
+the rolling stones rolling stones 1964 the rolling stones little by little,dolly parton jolene 1,0,0.9562547206878662,0.7636851072311401
+abba happy new year abba,tom waits one from the heart ost ot vsego serdca saundtrek 1982 tom waits presents,0,0.8645932078361511,0.36869555711746216
+modern talking youre my heart youre my soul modern talking mix 98,the velvet underground who loves the sun,0,0.8031120896339417,0.32440683245658875
+megadeth family tree,the prodigy voodoo people,0,0.5963152050971985,0.1931786835193634
+eminem lose yourself,public enemy public enemy no 1,0,0.8042726516723633,0.4792234003543854
+the chemical brothers block rockin beats,robert johnson sweet home chicago robert johnson sweet home chicago,0,0.5044177174568176,0.18892532587051392
+otis redding send me some lovin,george michael to be forgiven,0,0.8412531018257141,0.34152907133102417
+fleetwood mac fleetwood mac 1975 fleetwood mac crystal,the notorious big notorious big big poppa,0,0.8845287561416626,0.4388207495212555
+tupac shakur happy home,amy winehouse take the box,0,0.2733473777770996,0.18531398475170135
+metallica one metallica one,ramones ramones cretin hop,0,0.972840428352356,0.1486884504556656
+the cure lullaby,black sabbath take me home,0,0.6101848483085632,0.32239651679992676
+guns n roses guns nroses dont cry,janis joplin janis banter,0,0.7166465520858765,0.3900732398033142
+tina turner foreign affair,alt j taro taro,0,0.6938338875770569,0.4256468415260315
+blondie blondie live 1999 blondie call me,system of a down aerials,0,0.9727792143821716,0.20830518007278442
