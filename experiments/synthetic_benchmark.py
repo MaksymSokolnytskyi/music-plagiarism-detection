@@ -25,7 +25,12 @@ import numpy as np
 
 from musicplag import dtw, markov, metrics, nmf, spectral, synth
 from musicplag.config import CONFIG
-from musicplag.features import DEFAULT_FEATURES, PairContext, PairFeature
+from musicplag.features import (
+    DEFAULT_FEATURES,
+    LocalChromaMatch,
+    PairContext,
+    PairFeature,
+)
 
 OUT = Path(__file__).resolve().parents[1] / "results" / "synthetic"
 N_SONGS = 30
@@ -84,6 +89,7 @@ class JointNMFDTW:
 
 FEATURES: tuple[PairFeature, ...] = (
     *DEFAULT_FEATURES,
+    LocalChromaMatch(),
     SeparateNMFMarkov(),
     SeparateNMFDTW(),
     JointNMFDTW(),
@@ -142,7 +148,9 @@ def report(rows: list[dict[str, object]], seconds: float) -> str:
         f"{SNR_DB:.0f} dB SNR with a random 0-2 bar intro, {seconds / 60:.1f} min).",
         "",
         "**Read this as a unit test of the mathematics, not as a detector benchmark.** "
-        "Additive synthesis with exact pitches is far easier than produced recordings.",
+        "Additive synthesis with exact pitches is far easier than produced recordings. "
+        "`chroma_local` is the exploratory window search added after the full-track "
+        "evaluation; the last three rows are the v1-v3 ablation baselines.",
         "",
         "## Derived vs unrelated, all edits pooled",
         "",

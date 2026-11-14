@@ -1,0 +1,28 @@
+original,suspect,label,transposition,relation,cnn_cosine,cnn_head,chroma_profile,chroma_dtw,markov_js,ssm_form,fourier_mellin,chroma_local
+the gap band oops upside your head,mark ronson uptown funk official video ft bruno mars,1,3,plag,0.9112781087557474,0.6685224175453186,0.991616,0.853841,0.739243,0.059835,0.935793,0.903408
+jennifer rush the power of love official video vod,céline dion the power of love official remastered hd video,1,-1,remake,0.94183878103892,0.43377894163131714,0.972929,0.859322,0.809949,0.204018,0.947123,0.865246
+without you badfinger,mariah carey without you official lyric video,1,0,remake,0.9240843852361044,0.8267728686332703,0.979050,0.837438,0.736851,0.029027,0.962788,0.840268
+official audio 이정현 lee jung hyun 와,bandido vamos amigos eurodance version,1,5,plag,0.25670287509759265,0.3544183373451233,0.964912,0.818902,0.742106,-0.121028,0.936270,0.837486
+queen under pressure official video,vanilla ice ice ice baby official music video,1,1,plag,0.7787530819574991,0.43917620182037354,0.937473,0.761765,0.768091,-0.068320,0.920539,0.824559
+joyful noise official music video flame feat lecrae john reilly,katy perry dark horse lyrics ft juicy j,1,1,plag,0.7622194886207581,0.6764160394668579,0.937992,0.793573,0.807435,0.138925,0.916467,0.791749
+sting shape of my heart official music video,juice wrld lucid dreams official music video,1,0,remake,0.9402083158493042,0.8820713758468628,0.958394,0.756805,0.745894,-0.053989,0.920915,0.766142
+gloria gaynor i will survive,진주 난 괜찮아,1,2,remake,0.7942085067431132,0.860381543636322,0.976946,0.843666,0.723589,-0.085260,0.934849,0.855458
+carmen habanera,i dle nxde,1,5,remake,0.8757274945576986,0.5558620095252991,0.974099,0.699519,0.780872,-0.022496,0.915320,0.782190
+right said fred i m too sexy original mix 2006 version,taylor swift look what you made me do,1,1,plag,0.8132492502530416,0.789084792137146,0.893031,0.820625,0.659122,0.090088,0.912780,0.798504
+the monkees mary mary,тнмк люба люба,1,-1,plag,0.8734617829322815,0.7860220670700073,0.983344,0.827965,0.741218,-0.001297,0.926821,0.837908
+queen under pressure official video,céline dion the power of love official remastered hd video,0,1,no_match,0.898348867893219,0.5048785209655762,0.960620,0.730387,0.744321,0.066243,0.933528,0.804322
+the gap band oops upside your head,juice wrld lucid dreams official music video,0,3,no_match,0.890554149945577,0.865058422088623,0.959792,0.750428,0.702008,-0.014887,0.897878,0.893814
+jennifer rush the power of love official video vod,vanilla ice ice ice baby official music video,0,-2,no_match,0.8172493577003479,0.3008618950843811,0.948844,0.768842,0.680774,-0.021081,0.860039,0.797504
+without you badfinger,katy perry dark horse lyrics ft juicy j,0,0,no_match,0.8359740575154623,0.8077355027198792,0.805300,0.723367,0.613748,0.028221,0.951940,0.770985
+sting shape of my heart official music video,mark ronson uptown funk official video ft bruno mars,0,-6,no_match,0.554745614528656,0.2877338230609894,0.967198,0.769792,0.669385,-0.072216,0.927551,0.811100
+gloria gaynor i will survive,smoke on the water 2024 remastered,0,3,no_match,0.8681846459706625,0.5906866192817688,0.970927,0.826566,0.726189,0.064691,0.946431,0.847933
+carmen habanera,taylor swift look what you made me do,0,0,no_match,0.8185344537099203,0.5690112113952637,0.933247,0.784212,0.685493,0.040867,0.913644,0.766422
+crazy frog axel f official video,i dle nxde,0,1,no_match,0.986173689365387,0.6051419377326965,0.967968,0.779465,0.886332,-0.106686,0.945851,0.883498
+september cry for you,bandido vamos amigos eurodance version,0,-1,no_match,0.9184164802233378,0.5110273361206055,0.970043,0.793895,0.682091,0.072554,0.927100,0.824383
+major lazer sua cara feat anitta pabllo vittar official music video,ed sheeran bad habits official lyric video,0,2,no_match,0.8065720995267233,0.7262514233589172,0.966160,0.762202,0.725333,0.042021,0.908280,0.806293
+the police message in a bottle official music video,dj snake taki taki ft selena gomez ozuna cardi b official music video,0,-3,no_match,0.7187464833259583,0.3605695068836212,0.917888,0.755109,0.711262,-0.080535,0.913858,0.807559
+astrud gilberto maria quiet,dance 싸이 psy 챔피언,0,5,no_match,0.8978450298309326,0.8501577973365784,0.944578,0.738272,0.785526,0.038779,0.843549,0.754579
+right said fred i m too sexy original mix 2006 version,mariah carey without you official lyric video,0,2,no_match,0.7482383648554484,0.4902007281780243,0.981101,0.757040,0.747036,-0.004482,0.937255,0.780859
+the monkees mary mary,rihanna love without tragedy only,0,0,no_match,0.9623662233352661,0.8976426720619202,0.940877,0.749530,0.745296,0.023066,0.921872,0.774517
+joyful noise official music video flame feat lecrae john reilly,진주 난 괜찮아,0,2,no_match,0.9741089940071106,0.6028885245323181,0.952338,0.779059,0.699768,-0.048831,0.857538,0.770846
+official audio 이정현 lee jung hyun 와,тнмк люба люба,0,-5,no_match,0.865822990735372,0.5412219762802124,0.968711,0.841642,0.685053,-0.028833,0.952936,0.870510

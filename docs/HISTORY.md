@@ -21,7 +21,7 @@ either fixed or dropped in this repository.
 1. **Per-track NMF gave atoms arbitrary labels (v1–v3).** NMF is identifiable only up to
    a permutation, so comparing $H_A$ and $H_B$ row by row compared unrelated atoms.
    Fixed with a shared dictionary (`nmf.joint_nmf`). On the synthetic benchmark the
-   same DTW goes from AUC 0.39 to 0.67 overall, and from 0.50 to 0.99 on covers vs
+   same DTW goes from AUC 0.37 to 0.68 overall, and from 0.49 to 0.99 on covers vs
    unrelated songs — see [results/synthetic/REPORT.md](../results/synthetic/REPORT.md).
 2. **The log-polar warp encoded the wrong invariances (v1–v2).** An image log-polar
    transform makes isotropic scaling and rotation into shifts. Musical edits are a
@@ -59,3 +59,17 @@ Persistent homology (v2) and the FAISS/HNSW index with a provenance graph (v1–
 engineering for a catalogue-scale system. Without a working pairwise comparison there
 was nothing for them to scale. The CNN weights (220 MB) and all audio stay out of the
 repository.
+
+## Where the rebuild ended up
+
+The rebuilt features are tested two ways. On the 27 hand-cut excerpts they point the
+right way where the CNN did not (chroma DTW 0.75 vs CNN 0.47–0.59). On the 90
+full-length pairs they sit at chance, like everything before them. The synthetic
+benchmark shows the transforms behave as derived. So the limit is the input
+representation — full-mix chroma — and not the alignment mathematics. Two bugs were
+found by sanity checks during this evaluation and fixed before the final tables:
+
+* silent frames had a cosine distance of 1 to themselves, so an identical pair scored
+  0.981;
+* the direct CQT was too slow for full tracks, so a multirate version replaced it.
+

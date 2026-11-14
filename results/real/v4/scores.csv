@@ -1,0 +1,91 @@
+original,suspect,label,transposition,v4_split,chroma_profile,chroma_dtw,markov_js,ssm_form,fourier_mellin,chroma_local
+guns n roses guns nroses dont cry,janis joplin janis banter,0,2,train,0.986707,0.809800,0.739578,0.130920,0.916310,0.904404
+muse the uprising,nirvana rape me,0,1,train,0.976119,0.862248,0.728576,0.103822,0.913242,0.911312
+otis redding send me some lovin,george michael to be forgiven,0,0,train,0.971475,0.795395,0.772077,-0.077865,0.909621,0.830540
+megadeth family tree,the prodigy voodoo people,0,5,train,0.967471,0.879517,0.481404,-0.102305,0.882491,0.904054
+the cure lullaby,black sabbath take me home,0,-6,train,0.950427,0.786698,0.699243,-0.093830,0.910156,0.842150
+tupac shakur happy home,amy winehouse take the box,0,1,train,0.986876,0.802546,0.708827,0.027960,0.929133,0.820233
+ccr proud mary,tina turner proud mary ike and tina turner,1,1,train,0.965388,0.811708,0.819373,0.015388,0.954066,0.863718
+talking heads psycho killer,depeche mode depeshe mode enjoy the silence,0,-6,train,0.983988,0.824479,0.673337,-0.013084,0.956953,0.933685
+stevie wonder higher ground,red hot chili peppers higher ground,1,1,train,0.995102,0.903386,0.591578,-0.082634,0.922736,0.919818
+postal service such great heights,iron wine such great heights,1,1,train,0.970673,0.776741,0.503327,0.052182,0.902846,0.878888
+the slits i heard it through the grapevine,marvin gaye i heard it through the grapevine written by norman whitfield and barrett strong in 1966 i heard it through the grapevine 1968,1,-1,train,0.964183,0.824000,0.702059,0.041292,0.931951,0.882965
+queen killer queen,kraftwerk kraftwerk 2 1972 kraftwerk atem,0,5,train,0.956760,0.826703,0.734286,0.042913,0.862260,0.865634
+snoop doggy dogg gin and juice,gourds gin and juice,1,2,train,0.966290,0.816991,0.567460,0.003842,0.893731,0.864169
+adele easy on me,madonna hung up,0,4,train,0.966892,0.786682,0.657309,0.034287,0.919730,0.829885
+gorillaz gorilas feel good inc,dr dre deeez nuuuts,0,-3,train,0.941501,0.813296,0.734732,-0.020570,0.913165,0.866889
+bruce springsteen the e street band blinded by the light,manfred mans earth band blinded by the light manfred mans earth band blinded by the light,1,-4,train,0.965148,0.841656,0.682842,0.070585,0.957903,0.900110
+rammstein ramshtajn du hast,kendrick lamar feat dr dre the recipe,0,5,train,0.960211,0.850030,0.556655,0.073044,0.806029,0.903347
+fleetwood mac fleetwood mac 1975 fleetwood mac crystal,the notorious big notorious big big poppa,0,5,train,0.973830,0.782423,0.651495,-0.022814,0.948902,0.829559
+nine inch nails hurt,johnny cash hurt johnny cash hurt,1,-2,train,0.982194,0.834259,0.777411,-0.002037,0.943543,0.962316
+cy grant feeling good,muse feeling good its a new dawn its a new day its a new life for me and im feeling good,1,-4,train,0.991807,0.774624,0.818972,0.111567,0.942197,0.804660
+abba happy new year abba,tom waits one from the heart ost ot vsego serdca saundtrek 1982 tom waits presents,0,-2,train,0.963172,0.729790,0.852130,0.147927,0.942721,0.828428
+the who behind blue eyes 1971 whos next,linking park behind blue eyes,1,0,train,0.993131,0.842005,0.850332,0.024471,0.889380,0.891901
+arctic monkeys i wanna be yours,pearl jam jeremy,0,-3,train,0.964193,0.824761,0.739353,-0.088239,0.872933,0.875815
+elton john sacrifice,aphex twin aphex twin avril 14th,0,-1,train,0.928855,0.742553,0.585492,0.087448,0.935356,0.822366
+otis redding respect remastered 1967 album version,aretha franklin aretha franklin respect,1,-2,train,0.978899,0.815607,0.723393,0.022863,0.931996,0.852625
+zutons valerie,amy winehouse valerie,1,0,train,0.991769,0.802001,0.776404,-0.039277,0.952809,0.888773
+cher cher believe,johnny cash johnny cash the legend 2005 johnny cash hey porter,0,-6,train,0.960742,0.833219,0.574226,0.091969,0.952175,0.870908
+carl perkins blue suede shoes,elvis presley blue suede shoes minus blue suede shoes elvis presley,1,5,train,0.950758,0.776267,0.611049,-0.052207,0.937140,0.873200
+the knife heartbeats,jose gonzalez heartbeats,1,0,train,0.935141,0.804172,0.600864,-0.026051,0.841094,0.850545
+the sex pistols sex pistols will play,bee gees love songs 2005 bee gees lonely days,0,-5,train,0.988794,0.791539,0.747611,0.073204,0.955478,0.846396
+siouxsie and the banshees the quarterdrawing of the dog,kate bush kate bush 1983 kate bush babooshka,0,-4,train,0.976752,0.846201,0.703409,0.077876,0.936278,0.926950
+the doors the very best of the doors 2001 the doors riders on the storm,james brown pavarotti its a mans world,0,-2,train,0.983097,0.820669,0.694682,0.016057,0.940468,0.892422
+gloria jones tainted love tainted love,soft cell tainted love soft cell tainted love,1,0,train,0.976740,0.804735,0.687323,0.130160,0.957443,0.839003
+acdc highway to hell,prince prince papa,0,1,train,0.973023,0.835057,0.757172,-0.027720,0.911037,0.898971
+dead or alive you spin me right round you spin me right round,flo rida you spin my head right round feat ke ha you spin my head right round feat ke ha,1,3,train,0.970021,0.879138,0.653477,0.035231,0.926688,0.911852
+outkast hey ya,obadiah parker hey ya,1,-3,train,0.968447,0.834748,0.706178,-0.075397,0.953126,0.885279
+the dubliners whiskey in the jar,metallica the best of the best 2017 metallica whiskey in the jar,1,3,train,0.988971,0.859230,0.597468,0.023427,0.957421,0.863163
+michael jackson michael jackson this is it ost majkl dzhekson vot i vsyo saundtrek 2009 michael jackson billie jean,miles davis 02 there is no greater love miles the new miles davis quintet 1956,0,-4,train,0.979975,0.745984,0.591315,0.112016,0.872963,0.809156
+slade sladest 1973 slade cum on feel the noize,quiet riot cum on feel the noize kids at the bar remix,1,-4,train,0.966595,0.852969,0.627097,0.005648,0.924105,0.902531
+wu tang clan wu tang clan in the hood,lady gaga poker face,0,0,train,0.992741,0.867714,0.798970,-0.037840,0.898719,0.925738
+david bowie heroes 2017 remaster,patti smith fred sonic smith it takes time,0,0,train,0.878254,0.871261,0.593211,0.012304,0.943853,0.930519
+lead belly black betty,ram jam black betty ram jam 1977 hard rockusa,1,-6,train,0.898075,0.794478,0.652298,0.027249,0.920653,0.816708
+acdc acdc thunderstruck,2 cellos acdc thunderstruck thunderstruck,1,-2,train,0.978582,0.898599,0.734638,0.098468,0.940423,0.965551
+simon garfunkel the sound of silence 01 simon garfunkel the sound of silence,disturbed the sound of silence,1,3,train,0.989054,0.864480,0.703589,0.062491,0.956215,0.905205
+whitney houston various jesus loves me whitney houston,massive attack electronic collection best trips 2001 massive attack teardrop,0,-5,train,0.957682,0.800114,0.734668,0.140518,0.892038,0.844048
+ray charles the very best of ray charles 1999 ray charles unchain my heart,jimi hendrix 12 jimi hendrix voodoo child slight return,0,-5,train,0.995555,0.856274,0.705032,0.015378,0.954122,0.862623
+the iron maidens run to the hills the iron maidens run to the hills,hellsongs run to the hills,1,-1,train,0.973085,0.736925,0.652590,0.062718,0.945875,0.916506
+jay z hollywood feat beyonc,ella fitzgerald introductions of ella fitzgerald,0,4,train,0.983669,0.829140,0.683419,0.021089,0.947231,0.875878
+the crickets i fought the law,the clash i fought the law and the law won,1,-2,train,0.927184,0.839947,0.610881,-0.033350,0.928672,0.856109
+kate bush running up that hill,placebo running up that hill a place for us to dream 20 years of placebo 2016,1,0,train,0.946154,0.875259,0.622280,-0.044664,0.962154,0.913321
+tina turner foreign affair,alt j taro taro,0,-5,train,0.976809,0.793925,0.596193,0.035598,0.949276,0.881792
+radiohead radiohead no surprises,billie eilish billie eilish bad guy,0,2,train,0.973782,0.751465,0.731077,0.071049,0.918395,0.864806
+the beatles yesterday the beatles yesterday,etta james etta james miss you,0,4,train,0.947332,0.789795,0.557396,-0.030673,0.924060,0.815870
+kanye west stronger 2007 full kanye west stronger 2007 full,joy division decades,0,-1,train,0.936226,0.840079,0.671525,0.127758,0.944517,0.898944
+muddy waters muddy waters mannish boy,pink floyd echoes the best of pink floyd cd2 2001 pink floyd wish you were here,0,-2,train,0.926970,0.778680,0.649353,-0.040840,0.944253,0.821009
+radiohead creep,postmodern jukebox creep vintage postmodern jukebox radiohead cover ft haley,1,-2,train,0.978045,0.804780,0.709869,0.069947,0.950391,0.892926
+the rolling stones rolling stones 1964 the rolling stones little by little,dolly parton jolene 1,0,-3,train,0.984805,0.836006,0.675810,-0.202824,0.936060,0.866619
+stevie wonder conversation peace 1995 stevie wonder sorry,leonard cohen leonard cohen nevermind,0,-5,train,0.965699,0.863350,0.572778,0.068998,0.868501,0.929252
+fleetwood mac black magic woman,santana black magic woman santana black magic woman,1,0,train,0.991155,0.788320,0.815631,0.074392,0.958087,0.818301
+roberta flack killing me softly with his song,fugees killing me softly killing me softly,1,4,train,0.975911,0.774168,0.838291,-0.079281,0.953573,0.837816
+kid cudi pursuit of happiness pursuit of happiness,lissie pursuit of happiness,1,3,train,0.909773,0.783694,0.591526,0.017130,0.770404,0.891091
+lynyrd skynyrd simple man original version,shinedown simple man,1,1,train,0.989664,0.804378,0.761073,0.080282,0.924106,0.854365
+the cardigans iron man,black sabbath paranoid 1970 iron man,1,5,train,0.921267,0.737821,0.660386,0.159427,0.901398,0.790971
+robert hazard girls just want to have fun,cyndi lauper girls just wanna have fun girls just want to have fun ost,1,-3,val,0.978404,0.836120,0.711948,0.146176,0.944284,0.896650
+the source feat candi staton youve got the love,florence the machine youve got the love florence the machine youve got the love,1,-1,val,0.944930,0.783166,0.799457,0.067429,0.954031,0.895140
+beastie boys intergalactic,lana del ray lana del rey summertime sadness,0,-4,val,0.953992,0.811081,0.637712,0.003954,0.936491,0.870484
+iron maiden coming home,tool jerk off,0,-2,val,0.991300,0.859365,0.706143,-0.007820,0.943439,0.891868
+duke ellington duke ellingtons liberian suite i like the sunrise,nina simone aint got no i got life nina simone v groovefinder remix,0,-5,val,0.981719,0.822757,0.633900,-0.110394,0.950675,0.869950
+metallica one metallica one,ramones ramones cretin hop,0,-3,val,0.952897,0.867406,0.684452,-0.011049,0.927601,0.931767
+the nerves hanging on the telephone ost electrick children,blondie hanging on the telephone,1,-3,val,0.972305,0.839305,0.657749,0.183391,0.949439,0.884902
+aretha franklin i say a little prayer aretha franklin i say a little prayer,jamiroquai butterfly,0,2,val,0.975367,0.800767,0.720733,0.011698,0.946029,0.847786
+modern talking youre my heart youre my soul modern talking mix 98,the velvet underground who loves the sun,0,1,val,0.977971,0.843017,0.665564,0.022029,0.920906,0.889704
+bob dylan knocking on heavens door ost knockin on heavens door,guns n roses knockin on heavens door,1,-1,val,0.978332,0.842310,0.831987,0.106503,0.925044,0.869714
+led zeppelin led zeppelin iv 1971 led zeppelin stairway to heaven,the smiths back to the old house,0,-2,val,0.945094,0.773234,0.868299,-0.111281,0.946374,0.842864
+dolly parton jolene,the white stripes jolene,1,-4,val,0.982457,0.823707,0.694848,0.009845,0.919128,0.842631
+elvis presley elvis presli always on my mind,pet shop boys always on my mind in my house,1,0,val,0.981045,0.819421,0.609714,0.077126,0.938521,0.880235
+blackstreet feat dr dre no diggity clean,chet faker no diggity blackstreet cover no diggity blackstreet cover,1,-2,test,0.982255,0.806527,0.836744,-0.085428,0.938328,0.862962
+the clash we are the clash,bj 246rk bj 246rk 1977 bjcrk bukolla,0,-2,test,0.990703,0.847406,0.730674,0.049635,0.925704,0.899201
+outkast bob,louis armstrong a kiss to build a dream on louis armstrong a kiss to build a dream on,0,-6,test,0.980904,0.818346,0.673809,0.191460,0.870441,0.951291
+blondie blondie live 1999 blondie call me,system of a down aerials,0,3,test,0.982811,0.840268,0.757810,0.040495,0.954304,0.920482
+ednaswap torn,natalia imbruglia torn,1,0,test,0.977482,0.841204,0.914880,0.118322,0.950676,0.877319
+cris isaak wicked game,him him wicked game,1,0,test,0.989164,0.855497,0.804966,-0.008315,0.849287,0.879969
+eminem lose yourself,public enemy public enemy no 1,0,-6,test,0.890849,0.882799,0.586319,0.128798,0.868458,0.955081
+nirvana nirvana smells like teen spirit,83 covers for smells like teen spirit 2009 paul anka smells like teen spirit,1,-5,test,0.986616,0.836455,0.730440,0.036921,0.887112,0.914154
+metallica metallica nothing else matters,apocalyptica cult 2000 apocalyptica nothing else matters metallica cover live in mnchen,1,-2,test,0.996367,0.860436,0.834138,0.001903,0.955895,0.926937
+the chemical brothers block rockin beats,robert johnson sweet home chicago robert johnson sweet home chicago,0,-6,test,0.979257,0.790653,0.652498,-0.078285,0.921959,0.886850
+john coltrane im old fashioned,joni mitchell woodstock,0,0,test,0.922939,0.693960,0.878590,0.013629,0.956946,0.804509
+james ray got my mind set on you parts 1 2,i got my mind set on you i got my mind set on you,1,-1,test,0.982057,0.858199,0.682941,0.062989,0.957859,0.876520
+nick cave and the bad seeds the road ost doroga saundtrek with warren ellis 2009 nick cave and the bad seeds the cellar,muzika v mashinu 2025 deep purple smoke on the water searchshino remixfin,0,0,test,0.975877,0.844525,0.526939,0.078610,0.932079,0.919909
+the beatles with a little help from my friends,joe cocker 1969 with a little help from my friends with a little help from my friends jimmy page on guitar,1,5,test,0.978858,0.825636,0.771802,-0.038609,0.895634,0.852120

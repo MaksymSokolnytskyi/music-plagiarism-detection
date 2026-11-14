@@ -43,3 +43,24 @@ def test_self_comparison_is_maximal(fast_cfg: Config) -> None:
     for name, value in report.features.items():
         assert value == pytest.approx(1.0, abs=1e-6), name
     assert report.transposition_semitones == 0
+
+
+def test_local_match_finds_a_passage_quoted_inside_unrelated_material() -> None:
+    from musicplag.config import CONFIG
+    from musicplag.features import LocalChromaMatch
+
+    rng = np.random.default_rng(13)
+    cfg = CONFIG.model_copy(update={"local_window_seconds": 10.0})
+    rate = cfg.sample_rate / cfg.hop_length
+    n = round(60 * rate)  # one minute of unpooled frames
+    original = rng.random((84, n)) ** 8
+    suspect = rng.random((84, n)) ** 8
+    start, length = (n // 2) // 8 * 8, round(15 * rate) // 8 * 8  # on pooling blocks
+    suspect[:, start : start + length] = original[:, :length]
+    unrelated = rng.random((84, n)) ** 8
+    feature = LocalChromaMatch()
+    quoted = feature(PairContext(original, suspect, cfg))
+    assert quoted > 0.99
+    # chroma cosine has a high floor (~0.9) even for unrelated material; what matters
+    # is that an exact quote reaches 1 and unrelated audio stays clearly below it
+    assert quoted > feature(PairContext(original, unrelated, cfg)) + 0.05

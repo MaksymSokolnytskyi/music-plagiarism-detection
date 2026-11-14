@@ -56,3 +56,26 @@ def test_transpose_cqt_round_trips_inside_range() -> None:
     np.testing.assert_array_equal(
         spectral.transpose_cqt(spectral.transpose_cqt(x, 4), -4), x
     )
+
+
+def test_multirate_matches_direct_convolution(fast_cfg: Config) -> None:
+    rng = np.random.default_rng(7)
+    t = np.arange(int(3.0 * fast_cfg.sample_rate)) / fast_cfg.sample_rate
+    freqs = 55.0 * 2 ** (rng.integers(0, 72, 12) / 12)  # tones across six octaves
+    y = sum(np.sin(2 * np.pi * f * t + rng.uniform(0, 6)) for f in freqs)
+    direct = spectral.cqt(y, fast_cfg, multirate=False)
+    fast = spectral.cqt(y, fast_cfg)
+    assert np.linalg.norm(fast - direct) / np.linalg.norm(direct) < 0.1
+    expected = set(np.round(12 * np.log2(freqs / fast_cfg.fmin)).astype(int))
+    top = set(np.argsort(fast.mean(axis=1))[-len(expected) :])
+    assert top == expected  # every tone in its own semitone bin
+
+
+def test_silence_matches_silence() -> None:
+    from musicplag import dtw
+
+    mag = np.zeros((84, 40))
+    mag[45, 10:30] = 1.0  # A4 between two stretches of silence
+    c = spectral.chroma(mag)
+    assert dtw.dtw(dtw.cosine_cost(c, c)).distance == pytest.approx(0.0, abs=1e-9)
+    np.testing.assert_allclose(c[:, 0], np.full(12, 1 / np.sqrt(12)))

@@ -153,6 +153,34 @@ class FourierMellin:
         return invariants.descriptor_similarity(d_a, d_b)
 
 
+@dataclass(frozen=True)
+class LocalChromaMatch:
+    """Best match of any window of A anywhere in B (subsequence DTW). Exploratory.
+
+    Slides a ``local_window_seconds`` window over A with 50% overlap, aligns each window
+    to its best span of B under each of the 12 transpositions (a short quote need not
+    share the global key estimate), and keeps the best per-step similarity. Designed
+    after the full-track evaluation showed that global alignment drowns a borrowed
+    passage in the rest of the song; not in :data:`DEFAULT_FEATURES` for that reason.
+    """
+
+    name: str = "chroma_local"
+
+    def __call__(self, ctx: PairContext) -> float:
+        a, b = ctx.chroma_a, ctx.chroma_b
+        per_second = ctx.frame_rate / ctx.cfg.pool_frames
+        width = min(
+            round(ctx.cfg.local_window_seconds * per_second), a.shape[1], b.shape[1]
+        )
+        starts = range(0, a.shape[1] - width + 1, max(1, width // 2))
+        rolled = [np.roll(b, k, axis=0) for k in range(12)]
+        return max(
+            dtw.subsequence_dtw(dtw.cosine_cost(a[:, s : s + width], b_k)).similarity
+            for s in starts
+            for b_k in rolled
+        )
+
+
 DEFAULT_FEATURES: tuple[PairFeature, ...] = (
     ChromaProfile(),
     ChromaDTW(),

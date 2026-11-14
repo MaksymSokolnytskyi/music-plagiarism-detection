@@ -27,13 +27,15 @@ from __future__ import annotations
 
 import numpy as np
 from numpy.typing import NDArray
-from scipy.signal import fftconvolve
+from scipy.signal import fftconvolve, resample_poly
 
 from musicplag.config import CONFIG, Config
 
 FloatArray = NDArray[np.float64]
 
 _EPS = 1e-12  # guards divisions by zero energy (silence)
+_SILENCE_DB = -60.0  # frames this far below the peak count as silence
+_ANTIALIAS_FRACTION = 0.4  # octave must sit below 40% of a decimated rate
 TONNETZ_RADII = (1.0, 1.0, 0.5)  # fifths, minor thirds, major thirds — Harte 2006
 TONNETZ_ANGLES = (7 * np.pi / 6, 3 * np.pi / 2, 2 * np.pi / 3)
 
@@ -44,28 +46,50 @@ def bin_frequencies(cfg: Config = CONFIG) -> FloatArray:
     return cfg.fmin * 2.0 ** (k / cfg.bins_per_octave)
 
 
-def cqt(y: FloatArray, cfg: Config = CONFIG) -> FloatArray:
+def _decimation(f_top: float, sr: int, hop: int) -> int:
+    """Largest power-of-two factor that keeps ``f_top`` below 40% of the reduced rate."""
+    factor = 1
+    while hop % (2 * factor) == 0 and f_top < _ANTIALIAS_FRACTION * sr / (2 * factor):
+        factor *= 2
+    return factor
+
+
+def cqt(y: FloatArray, cfg: Config = CONFIG, multirate: bool = True) -> FloatArray:
     """Magnitude constant-Q transform, shape ``(n_bins, n_frames)``.
 
-    Direct per-bin convolution (Brown 1991) with a Hann window: slow for long
-    recordings but dependency-free and exact. Bins whose centre frequency is above
-    Nyquist are left at zero. Frames are centred on ``n * hop_length``.
+    Direct per-bin convolution (Brown 1991) with a Hann window. With ``multirate``
+    (default) each octave is computed on the signal decimated by the largest power of
+    two that keeps the octave below 40% of the reduced sample rate (an anti-aliased
+    polyphase resampler precedes each halving). The cost drops from ``n_bins`` to
+    about ``2 * bins_per_octave`` full-length convolutions; ``tests/test_spectral.py``
+    checks the result against ``multirate=False``. Bins above Nyquist stay zero;
+    frames are centred on ``n * hop_length``.
     """
     y = np.asarray(y, dtype=np.float64)
     assert y.ndim == 1, "cqt expects a mono signal"
     q = 1.0 / (2.0 ** (1.0 / cfg.bins_per_octave) - 1.0)
     n_frames = 1 + len(y) // cfg.hop_length
-    centres = np.arange(n_frames) * cfg.hop_length
     out = np.zeros((cfg.n_bins, n_frames))
-    for k, f_k in enumerate(bin_frequencies(cfg)):
+    freqs = bin_frequencies(cfg)
+    signals: dict[int, FloatArray] = {1: y}
+    for k, f_k in enumerate(freqs):
         if f_k >= cfg.sample_rate / 2:
             break
-        n_k = int(np.ceil(q * cfg.sample_rate / f_k))
+        octave_top = freqs[
+            min(len(freqs) - 1, (k // cfg.bins_per_octave + 1) * cfg.bins_per_octave - 1)
+        ]
+        factor = (
+            _decimation(octave_top, cfg.sample_rate, cfg.hop_length) if multirate else 1
+        )
+        while factor not in signals:  # halve the previous level once per new factor
+            prev = max(signals)
+            signals[prev * 2] = resample_poly(signals[prev], 1, 2)
+        x, sr = signals[factor], cfg.sample_rate / factor
+        n_k = int(np.ceil(q * sr / f_k))
         m = np.arange(n_k)
         kernel = np.hanning(n_k) * np.exp(-2j * np.pi * q * m / n_k) / n_k
-        # correlation with the kernel == convolution with its time reverse
-        full = fftconvolve(y, kernel[::-1])
-        idx = centres + n_k - 1 - n_k // 2
+        full = fftconvolve(x, kernel[::-1])  # correlation == convolution with reversal
+        idx = np.arange(n_frames) * (cfg.hop_length // factor) + n_k - 1 - n_k // 2
         valid = idx < len(full)
         out[k, valid] = np.abs(full[idx[valid]])
     return out
@@ -83,13 +107,18 @@ def pool(features: FloatArray, factor: int) -> FloatArray:
 def chroma(cqt_mag: FloatArray, bins_per_octave: int = 12) -> FloatArray:
     """Fold CQT energy into pitch classes; each frame L2-normalised, shape ``(12, T)``.
 
-    Assumes ``fmin`` is a C, so row 0 is C. Requires one bin per semitone.
+    Assumes ``fmin`` is a C, so row 0 is C. Requires one bin per semitone. Frames more
+    than 60 dB below the loudest frame carry no pitch information and become uniform;
+    otherwise two silent frames would have cosine distance 1, not 0.
     """
     assert bins_per_octave == 12, "chroma folding assumes one bin per semitone"
     energy = cqt_mag**2
     c = np.zeros((12, cqt_mag.shape[1]))
     for p in range(12):
         c[p] = energy[p::12].sum(axis=0)
+    total = c.sum(axis=0)
+    silent = total <= total.max() * 10 ** (_SILENCE_DB / 10) if total.size else total > 0
+    c[:, silent] = 1.0  # no pitch information: uniform, so silence matches silence
     return c / (np.linalg.norm(c, axis=0, keepdims=True) + _EPS)
 
 

@@ -32,6 +32,9 @@ class Config(BaseModel):
     markov_smoothing: float = Field(
         0.5, gt=0, description="Additive (Lidstone) smoothing of transition counts."
     )
+    local_window_seconds: float = Field(
+        30.0, gt=0, description="Query window for the local (subsequence) match."
+    )
     ssm_size: int = Field(48, ge=8, description="SSMs are resampled to this square size.")
     mellin_bins: int = Field(32, ge=8, description="Log-spaced tempo-modulation bins.")
     seed: int = Field(0, description="Seed for every stochastic step (NMF init).")

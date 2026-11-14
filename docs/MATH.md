@@ -24,13 +24,24 @@ $Q = (2^{1/b}-1)^{-1} \approx 16.8$ fixed (Brown 1991):
 
 $$X[k,n] = \frac{1}{N_k}\sum_{m=0}^{N_k-1} x\!\left[nH + m - \lfloor N_k/2\rfloor\right] w_{N_k}[m]\, e^{-j2\pi Qm/N_k}.$$
 
+**Multirate evaluation.** Bin $k$ needs a window of $N_k$ samples, up to ~11k for the
+lowest C. Computing every bin at the full rate costs 84 full-length convolutions. Each
+octave is instead computed on the signal decimated by the largest power of two that
+keeps that octave below 40% of the reduced rate, with an anti-aliased polyphase
+resampler. That is about $2b$ full-length convolutions, 3.8× faster on a 4-minute
+track. A test checks it against direct evaluation.
+
 **The property everything else uses:** a transposition by $s$ semitones multiplies
 every frequency by $2^{s/12}$, which on this axis is a *shift by $s$ bins*. Tests check
 this on pure tones (`tests/test_spectral.py`).
 
 ## 2. Chroma, Tonnetz and the transposition estimate — `spectral`
 
-Chroma folds octaves: $c[p,n] = \sum_o |X[p+12o,n]|^2$, normalised per frame. The
+Chroma folds octaves: $c[p,n] = \sum_o |X[p+12o,n]|^2$, normalised per frame. Frames
+more than 60 dB below the recording's peak carry no pitch information and are set to
+the uniform vector. Otherwise two silent frames would have cosine distance 1 to each
+other. That bug made an identical pair of full-length tracks score 0.981 instead of
+1.0. The
 Tonnetz (Harte, Sandler & Gasser 2006) maps chroma onto three circles — fifths, minor
 thirds and major thirds — $\zeta = \Phi c/\lVert c\rVert_1$, with
 $\Phi_{2i,p} = r_i\sin(p\,\theta_i)$, $\Phi_{2i+1,p} = r_i\cos(p\,\theta_i)$ and
@@ -65,6 +76,12 @@ Two details differ from the hackathon code:
 **Subsequence DTW** (Müller, *FMP* §7.2) sets $D_{0,j} = C_{0,j}$ (free start) and takes
 $\min_j D_{N-1,j}$ (free end). That is the model for a sample or a quoted hook inside a
 longer track; the test recovers an embedded quote's exact span.
+
+**Window search (exploratory, `features.LocalChromaMatch`).** Slide a 30 s window over
+$A$ (50% overlap). Run subsequence DTW of each window against $B$ under all 12
+transpositions, and keep the best per-step similarity. This was added after the
+full-track evaluation, to test whether global alignment was what failed. It scores
+0.996 on the synthetic benchmark and 0.50 on the 90 full-track pairs, so it was not.
 
 ## 4. NMF with a shared dictionary — `nmf`
 
